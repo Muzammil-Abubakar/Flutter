@@ -1,0 +1,120 @@
+First we import material.dart
+
+then we run void main and inside void main we have runapp which is our entry point
+
+inside our runapp we have to give a widget that flutter will render. 
+
+for that we can use custom widget by using class and then extending after that we have to override the build method. 
+
+we can also just use a pre built class such as materialApp which is a class that gives us some basic good looking things provided by google.
+
+inside material app in home attribute/property: we can also use a scaffold, why? i forgot
+
+
+in scaffold we have appbar property, and many others.
+
+
+But doing this without build and overriding will not us see the changes without hot reload. The reason we use stateless widgets and custom classes is to see the changes immediately after saving the file as it automatically hot reloads for us.
+
+the buildcontext context is a something that is required to be passed around sometimes to differnt widgets or functions
+
+Now we can even pass Home class into the body of scaffold.
+
+Then comes the container widget, very much like a div it helps us in managing our content through padding margins and etc 
+
+By default container hogs all the space if there is no child
+
+padding and margin usually come inside container. and use edgeinsets all
+
+To change the text style properties, we can use style in the style tab
+
+
+The refactoring in Flutter is so clean omg. You can just move it out somewhere else.
+
+Column widget can have multiple children that is why we can use a children array for that.
+
+Column will try shift all elements so all the largest width elements start from left most and small width element shift to the right to keep aligned.
+
+main axis and cross axis means row and column on the type of group.
+
+stretching the axis, overrides the values.
+
+Ok so row and column are super super super fun ngl broskis
+
+we can give assets path through pubsec.yaml
+
+so changing assets or other main folders can cause issues which can be fixed by running flutter clean, flutter pub get and flutter run
+
+In case of overflowing widget, we can use expanded widget, then we can use alignment with alignment geometry and fit with boxfit
+
+expanded helps the element take all the available space, so incase of herizontal text element after sized box in expanded, it will take up all available space first then place the text at the end, on the right side
+
+
+Best button is the filled button, for styling we have the filledbutton.stylefrom attribute which feels really good to use, we get foreground and background options. Also we have to put child in the last, as it is a convention and it may break the code sometimes.
+
+Stateless widget can be easily converted to stateful widget by your ide. Also you need to use setstate in the functions where you are wanting to update the state otherwise the app will not rebuild.
+
+you dont need curly braces in for loop as for loop is being applied on each seperate child so just place it according to the comma.
+
+
+When making custom widgets, we make a class for them and then put them into the parameter in the class constructor and also initialize a final variable that will store that value.
+
+This is honestly so fun, i love this so muchhhhh.
+
+
+Funnnnnn thingggg, ommgggg soooo funnnnnn.
+
+For parameters that are necessary, we use required keyword. Also we have to make sure that after the constructor, the type of the class mtches the parameters that we will be giving to the class. For example void Function(), for a function, final Widget() for a widget etc.
+
+In the class const body, the parameters in the culry braces must always be provided and they cannot be left empty.  
+
+So now i started another video and that guy told a very fun thing, that flutter is widget inside widget, but to put a widget inside a widget you first need tot give an arguement inside that first widget.
+
+The main data types in flutter/ dart are: String, int, double, List, Map where map is basically the equivalent of Dictionaries, you initialize a map by putting curly braces {}. Also you can give strong type map and list so you dont put any weird value inside of them.
+
+In dart, dynamic is used for a type that can contain all the types.
+
+we can use double.infinity for spreading the code. Body center was to start the code of the body from the center.
+
+By default MaterialApp provides us with some themes, For example if we make a filledButton, it will have a Purple color, who decided that and can we change that etc, for these things we will use themes.
+
+Similarly, stuff like text size and font etc, and appbar and body color are also defined by these default themes.
+
+For setting theme we just create a new dart file and create a new file inside it.
+
+Refresher: Static fields of a class are properties of a class that can be accessed directly without making an instance of the class.
+
+so in case of colors , just make a color variable and provide it with a color value.
+
+This was just to easily access custom colors that we have decided upon. After that we need to create a theme data object.
+
+So in themedata we have to give colorScheme with attribute from seed; incase we dont want to specify each color of the theme by ourselves. 
+
+after that we let the seed be the primary color of our AppColor.
+
+Then we put that theme into the main entry point below the materialApp
+
+Within themeData, we can also change stuff like scaffold color, appbarTheme and etc.
+
+He didnt tell much about the surfaceTintColor, saying it would become apparent in the future videos.
+
+Now we are working on the textTheme, and so the TextTheme takes some textstyls for some specific sizes.
+
+We can also use copywith, it helps us in creating a copy with something by keeping the defaults as it is but changing the others to custom ones we set.
+
+
+Ok so now he also teaches us how to use context in build widget, we have to use themeof and then theme type and then subtype/attribute
+
+Again theme was given while calling the materialApp first through the runApp function, then maybe it saves it in context.
+
+Ok So genius thing is to make theme, and then make some classes for that theme in a shared dir in lib and creating a dartFile called styled_text etc. This will help in 1. making code reusable and needing to change only at one place, 2 removing redudancy of verbose introduced by 1.
+
+We can install Google Fonts through pub install and finding the package for that.
+
+The method and imports for every package can be found in the docuementation of that package.
+
+As for gradients, we cannot directly apply gradients in flutter to a button, although we can create gradient fill for container widget
+
+For gradients, we have to decoration property and provide it with Box Decoration class.
+
+then we have to give colors and tell it from where to start and where to end. using (begin) and (end)
