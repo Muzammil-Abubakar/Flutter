@@ -118,3 +118,80 @@ As for gradients, we cannot directly apply gradients in flutter to a button, alt
 For gradients, we have to decoration property and provide it with Box Decoration class.
 
 then we have to give colors and tell it from where to start and where to end. using (begin) and (end)
+
+For outputting dynamic view of something we should use a list view widget. For using list view widget, we first need a list view builder
+
+in the list view builder we need item count and item builder, where item count is runs for character length and item Biuilder is the function that willl build each list  item according to that function
+
+in the item builder function we will give context or nothing if context is not being used, and then we pass in index which we will be using for index specific things, it hold the reference to item number. after that is our function body.
+
+List view wil cause you constraints problems because we do not know the length or height that this can achieve, so flutter will give us an error and ask us to constraint this before proceeding. For this we can use Expanded widget like before.
+
+Ok so theme such as CardTheme means, where to apply the color, and theme data e.g CardThemeData tells us how the theme should look like
+
+So now we are making our first Class, we make required fields and then final variables to store them, also a bool variable that is assigned a value of false.
+
+we also make a togglefunction that toggles our favorites.
+
+mixin is a collection of fields and methods that can then be used by other classes. They provide a way for different classes to share certain properties amongst each other.
+
+when we want to use a mixin, we add an "with" infront of class name.
+
+In case of getters, we use a getter function, the syntax is get var => _var;. You can also specify a type in the start
+
+something cool that i learned is that we can make a really cool list of maps as well, though i do not yet know how it will be used in other future stuff but hey atleast it looks really cool.
+
+As for enhanced enums. we can create one and its just like making a class, we give it construction arguements and then define those arguements, we will make identifiers for that enum by using the constructor and putting in required values in them.
+
+So up until now we have, stats mixin and vocation enhanced enum and some properties of itself as well. now we need a skill fields, and for that we need a skill object that contains those skills, for this we will make a class
+
+In the character class, the skill field will be a set of skill objects
+
+If we use a Set in a final, we can still update the values of that final variable through getter setters, although we cannot reassign to something else.
+
+When adding assets in the pubsec.yaml we dont really need to add the path to each image, we can just give the parent folder to that image.
+
+
+Right now we have dummy data which is showing the characters that we have, but we want to have the option of adding custom characters, for that we are making a create screen, with the dart file called create.dart
+
+For getting text from the user, there is a built in field in flutter called Text Field. In Text field, we have some text decorations, and Input decroations that let us add an prefix icon and also for adding a label
+
+We can also edit the input decoration fields in theme file, but not textfield directly
+
+
+for storing the text, we can use text editing controller, or the unchanged callback function or similar
+
+disposing text editing controllers, or similar variables that are used to store values but those values are not needed after the widget is removed from the scene tree. We can do that by using disponse function. the controller goes into the textField widget.
+
+So for the handling of text field, we are making a button handler that will check the state of the Text Controllers when the button is clicked, if the fields are empty then it will give an error, otherwise it will print the text for us
+
+After that we just called Vocation Card and displayed the different vocation which ngl looks really cool.
+
+For overflowing, we can just use SingleChildScrollView widget which makes the page scrollable for us.
+
+For detecting gestures like a tap on the vocation card, we can use a Gesture Detector widget something something blah blah.
+
+Ok so we first need a selected default state, that can be assigned within a variable and given the Vocationjunkie enum. Then for updating the vocation, we will make a function that will take in a vocation and use setState for doing a rebuild.
+
+When we are making a function for a construction and that function has arguements, we have to pass those arguements into the Function() brackets not identifier.
+
+then for toggle function we can use a ternary operator, really fun to do. Also we can check if the state is selected by comparing it to selected state. 
+The selected state is being updated when any onTap is called.
+
+in the ontap attribute of gesture detector, we have to give in the funciton we want to call within (){ here }
+
+uuid package is a package which helps us generate random id's
+
+To route inbetween screens, we use the navigator class, it works on a push and pop basis. or it can work on a replacement basis.
+
+The navigator class needs access to a context arguement, then we give MaterialPageRoute which takes builder and it takes context (called ctx for ease) then we go to the page we want to go to, remember flutter is rebuilding with udpated data each time which is so goat.
+
+Now we will be showing dialogue in case the person does not fill the form correctly. For that we will use showDialog function, it also takes in context, builder, inside the builder we can use alertDialog or Alert Dialog.
+
+within the Alert Dialog, we can style its colors and whatnot and also we can align the action property within it, through using mainAxisAlignment.
+
+for closing the dialgog, we will use the navigator class as flutter uses the dialog as some kind of route. For the context, we have to give ctx not the main context.
+
+also we can change bg color and surfacetint color
+
+Now we will be passing data into routes.

@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:rpg/models/character.dart';
+import 'package:rpg/screens/home/character_card.dart';
 import 'package:rpg/shared/styled_button.dart';
 import 'package:rpg/shared/styled_text.dart';
+import 'package:rpg/screens/create/create.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
-
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,10 +28,17 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.all(20),
             child: Column(
               children: [
-                StyledText('Character 1'),
-                StyledTitle('Character1'),
-                StyledHeading('Character1'),
-                StyledButton(onPressed: (){}, child: const StyledHeading("Create New"))
+                Expanded(
+                  child: ListView.builder(itemCount: characters.length,
+                    itemBuilder: (_,index){
+                      return CharacterCard(characters[index]);
+                    })
+                ),
+
+                StyledButton(onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (ctx) => Create()) );
+                },
+                    child: const StyledHeading("Create New"))
               ],
             ),
           ),

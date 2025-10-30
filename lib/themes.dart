@@ -30,7 +30,7 @@ ThemeData primaryTheme = ThemeData(
   textTheme: TextTheme(
     bodyMedium: TextStyle(
       color: AppColor.textColor,
-      fontSize: 16,
+      fontSize: 14,
       letterSpacing: 1,
     ),
     headlineMedium: TextStyle(
@@ -47,4 +47,26 @@ ThemeData primaryTheme = ThemeData(
     ),
 
   ),
+
+  cardTheme: CardThemeData(
+    color: AppColor.secondaryColor.withValues(alpha: 0.6),
+    surfaceTintColor: Colors.transparent,
+    shape: const RoundedRectangleBorder(),
+    shadowColor: Colors.transparent
+  ),
+
+  //Input decoration theme
+
+  inputDecorationTheme: InputDecorationThemeData(
+    filled: true,
+    fillColor: AppColor.secondaryColor.withValues(alpha: 0.5),
+    border: InputBorder.none,
+    labelStyle: TextStyle(color: AppColor.textColor),
+    prefixIconColor: AppColor.textColor,
+  ),
+
+  dialogTheme: DialogThemeData(
+    backgroundColor: AppColor.secondaryAccent,
+    surfaceTintColor: Colors.transparent,
+  )
 );
