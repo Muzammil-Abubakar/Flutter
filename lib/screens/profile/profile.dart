@@ -24,14 +24,13 @@ class Profile extends StatelessWidget {
               color: AppColor.secondaryColor.withValues(alpha: 0.3),
               child: Row(
                 children: [
-                  Image.asset('assets/img/vocations/${character.vocation.image}', width: 140,height: 140,),
+
                   SizedBox(width: 20,),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        StyledHeading(character.vocation.title),
-                        StyledText(character.vocation.description),
+
                       ],
                     ),
                   )

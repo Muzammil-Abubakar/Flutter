@@ -13,6 +13,7 @@ class AppColor{
 
 ThemeData primaryTheme = ThemeData(
 
+
   //Seed Color
   colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
 
@@ -25,6 +26,15 @@ ThemeData primaryTheme = ThemeData(
     foregroundColor: AppColor.textColor,
     centerTitle: true,
     surfaceTintColor: Colors.transparent,
+  ),
+
+  navigationBarTheme: NavigationBarThemeData(
+    backgroundColor: AppColor.secondaryColor,
+    surfaceTintColor: Colors.transparent,
+    ),
+
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: AppColor.secondaryColor,
   ),
 
   textTheme: TextTheme(

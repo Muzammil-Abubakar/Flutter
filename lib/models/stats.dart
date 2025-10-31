@@ -13,7 +13,7 @@ mixin Stats {
     "health": _health,
     "attack": _attack,
     "defense": _defense,
-    "skill": _skill
+    "skill": _skill,
   };
 
   List<Map<String,String>> get statsAsFormattedList => [
