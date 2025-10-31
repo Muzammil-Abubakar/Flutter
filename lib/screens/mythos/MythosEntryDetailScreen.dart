@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rpg/shared/styled_text.dart';
 import '../../models/mythos.dart';
 
 class MythosEntryDetailScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class MythosEntryDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(entry.title),
+        title: StyledTitle(entry.title),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -24,14 +25,10 @@ class MythosEntryDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             const SizedBox(height: 16),
-            Text(
-              entry.title,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
+            StyledHeading(entry.title),
             const SizedBox(height: 12),
-            Text(
-              entry.description,
-              style: Theme.of(context).textTheme.bodyMedium,
+            StyledText(
+              entry.description
             ),
           ],
         ),

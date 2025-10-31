@@ -96,7 +96,7 @@ class _CharacterListState extends State<CharacterList> {
                     });
                   }
                 },
-                child: const StyledText('Create'),
+                child: const StyledHeading('Create'),
               ),
             ),
           ],

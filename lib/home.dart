@@ -3,12 +3,14 @@ import 'package:rpg/models/area.dart';
 import 'package:rpg/screens/area/area_list.dart';
 import 'package:rpg/screens/character/CharacterList.dart';
 import 'package:rpg/screens/character/character_profile.dart';
+import 'package:rpg/screens/event/Event_list_screen.dart';
 import 'package:rpg/screens/mythos/cultural_mythos_screen.dart';
 import 'package:rpg/screens/mythos/natural_mythos_screen.dart';
 import 'package:rpg/shared/styled_text.dart';
 import 'package:rpg/themes.dart';
 
 import 'models/character.dart';
+import 'models/event.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -82,7 +84,7 @@ class Home extends StatelessWidget {
                       "assets/img/vocations/terminal_raider.jpg",
                       cardWidth,
                       cardHeight,
-                      CulturalMythosScreen()
+                      EventListScreen(events: sampleEvents)
                   ),
                 ],
               ),

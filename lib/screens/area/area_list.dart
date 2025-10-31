@@ -15,7 +15,7 @@ class AreaList extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Areas by Terrain")),
+      appBar: AppBar(title: const StyledHeading("Areas by Terrain")),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(12),

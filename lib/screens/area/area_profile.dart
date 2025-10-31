@@ -32,7 +32,7 @@ class AreaProfileScreen extends StatelessWidget {
 
               // Characters
               if (area.characters.isNotEmpty) ...[
-                StyledHeading('Characters'),
+                StyledHeading('Belonging Characters'),
                 const SizedBox(height: 8),
                 Column(
                   children: area.characters
@@ -49,7 +49,6 @@ class AreaProfileScreen extends StatelessWidget {
                       child: Card(
                         child: ListTile(
                           title: StyledText(c.name),
-                          subtitle: StyledText(c.role),
                         ),
                       ),
                     ),

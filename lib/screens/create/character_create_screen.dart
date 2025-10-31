@@ -167,11 +167,18 @@ class _CharacterCreateScreenState extends State<CharacterCreateScreen> {
               const SizedBox(height: 10),
               const Center(child: StyledText("May he have a great story")),
               const SizedBox(height: 12),
-              TextField(controller: _nameController, decoration: const InputDecoration(labelText: 'Name')),
+              TextField(controller: _nameController, style: TextStyle(
+                  color: Colors.white
+              ),
+                  decoration: const InputDecoration(labelText: 'Name')),
               const SizedBox(height: 12),
-              TextField(controller: _roleController, decoration: const InputDecoration(labelText: 'Role')),
+              TextField(controller: _roleController, style: TextStyle(
+                  color: Colors.white
+              ), decoration: const InputDecoration(labelText: 'Role')),
               const SizedBox(height: 12),
-              TextField(controller: _goalController, decoration: const InputDecoration(labelText: 'Goal')),
+              TextField(controller: _goalController, style: TextStyle(
+                  color: Colors.white
+              ), decoration: const InputDecoration(labelText: 'Goal')),
               const SizedBox(height: 12),
               DropdownButton<String>(
                 dropdownColor: AppColor.secondaryColor,
