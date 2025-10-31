@@ -54,6 +54,7 @@ class MythosScaffold extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.history), label: "Historic"),
         ],
       ),
+
     );
   }
 }

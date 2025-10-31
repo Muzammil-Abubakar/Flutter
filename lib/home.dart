@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
                   NavCards(
                       context,
                       "Characters",
-                      "assets/img/vocations/algo_wizard.jpg",
+                      "assets/img/vocations/characters.jpg",
                       cardWidth,
                       cardHeight,
                       CharacterList(initialCharacters: sampleCharacters,)
@@ -65,7 +65,7 @@ class Home extends StatelessWidget {
                   NavCards(
                       context,
                       "Areas",
-                      "assets/img/vocations/code_junkie.jpg",
+                      "assets/img/vocations/Areas.jpeg",
                       cardWidth,
                       cardHeight,
                       AreaList()
@@ -73,7 +73,7 @@ class Home extends StatelessWidget {
                   NavCards(
                       context,
                       "Mythos",
-                      "assets/img/vocations/ux_ninja.jpg",
+                      "assets/img/vocations/mythos.jpeg",
                       cardWidth,
                       cardHeight,
                       CulturalMythosScreen()
@@ -81,7 +81,7 @@ class Home extends StatelessWidget {
                   NavCards(
                       context,
                       "Events",
-                      "assets/img/vocations/terminal_raider.jpg",
+                      "assets/img/vocations/events.jpg",
                       cardWidth,
                       cardHeight,
                       EventListScreen(events: sampleEvents)

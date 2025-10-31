@@ -100,9 +100,9 @@ class EventProfileScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           flex: 3,
-                          child: event.area.name != null
+                          child: event.area.image != null
                               ? Image.asset(
-                            event.area.name!,
+                            event.area.image,
                             width: double.infinity,
                             fit: BoxFit.cover,
                           )

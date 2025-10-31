@@ -50,12 +50,12 @@ final List<Mythos> sampleMythosList = [
     beliefs: MythosEntry(
       title: "Harmony and Decay",
       description: "Harmony between creation and decay defines balance.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/harmony and decay.jpg",
     ),
     originStory: MythosEntry(
       title: "Roots of the World Tree",
       description: "The first tribes rose from the roots of the World Tree after the Great Rain.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/roots of the world tree.jpg",
     ),
     traditions: MythosEntry(
       title: "New Moon Ritual",
@@ -67,17 +67,17 @@ final List<Mythos> sampleMythosList = [
     elementFocus: MythosEntry(
       title: "Mist and Stone",
       description: "The land itself breathes with shifting fogs.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/mist and stone.jpg",
     ),
     sacredSites: MythosEntry(
       title: "Whispering Caves",
       description: "Echoes carry ancestral voices.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/fantasy cave.jpg",
     ),
     creatures: MythosEntry(
       title: "Mistborne",
       description: "Spirits that take form from heavy fog and emotion.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/Mistborne.jpg",
     ),
 
     // Historic
@@ -89,12 +89,12 @@ final List<Mythos> sampleMythosList = [
     turningPoint: MythosEntry(
       title: "Frozen Rivers",
       description: "When the rivers froze mid-flow, dividing east and west forever.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/frozen rivers.jpg",
     ),
     artifact: MythosEntry(
       title: "Obsidian Mirror",
       description: "A cracked obsidian mirror said to reveal a person’s truest memory.",
-      image: "assets/img/vocations/algo_wizard.jpg",
+      image: "assets/img/mythos/obsidian mirror.jpeg",
     ),
   ),
 

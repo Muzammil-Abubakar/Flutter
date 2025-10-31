@@ -43,38 +43,23 @@ class _CharacterListState extends State<CharacterList> {
 
                   return Card(
                     margin: const EdgeInsets.symmetric(vertical: 8),
-                    child: Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Row(
-                        children: [
-                          // Name & Role
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                StyledHeading(character.name),
-                                const SizedBox(height: 4),
-                                StyledText(character.affiliation),
-                              ],
-                            ),
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                      title: StyledHeading(character.name),
+                      subtitle: StyledText(character.affiliation),
+                      leading: const Icon(Icons.shield, color: Colors.orange,),
+                      trailing: const Icon(Icons.arrow_forward, color: Colors.red,), // the shield icon on the right
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => CharacterProfileScreen(character: character),
                           ),
-                          // Navigate button
-                          IconButton(
-                            icon: const Icon(Icons.arrow_forward),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) =>
-                                      CharacterProfileScreen(character: character),
-                                ),
-                              );
-                            },
-                          ),
-                        ],
-                      ),
+                        );
+                      },
                     ),
                   );
+
                 },
               ),
             ),

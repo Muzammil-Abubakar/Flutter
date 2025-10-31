@@ -82,7 +82,7 @@ class AreaRow extends StatelessWidget {
                         Expanded(
                           flex: 3,
                           child: Image.asset(
-                            'assets/img/vocations/ux_ninja.jpg', // placeholder
+                            '${area.image}', // placeholder
                             fit: BoxFit.cover,
                             width: double.infinity,
                             // TODO: dynamically: 'assets/img/areas/${area.name}.jpg'

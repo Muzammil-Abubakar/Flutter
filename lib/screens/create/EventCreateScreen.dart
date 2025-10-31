@@ -24,7 +24,7 @@ class _EventCreateScreenState extends State<EventCreateScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Create Event"),
+        title: const StyledHeading("Create Event"),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -62,6 +62,7 @@ class _EventCreateScreenState extends State<EventCreateScreen> {
 
                 StyledHeading("Select Area"),
                 DropdownButtonFormField<Area>(
+                  dropdownColor: Colors.black,
                   value: selectedArea,
                   items: sampleAreas
                       .map((area) => DropdownMenuItem(
@@ -81,7 +82,9 @@ class _EventCreateScreenState extends State<EventCreateScreen> {
                   children: sampleCharacters.map((character) {
                     final isSelected = selectedCharacters.contains(character);
                     return ChoiceChip(
-                      label: Text(character.name),
+                      backgroundColor: Colors.black,
+
+                      label: Text(character.name, style: TextStyle(color: isSelected ? Colors.black : Colors.red),),
                       selected: isSelected,
                       onSelected: (selected) {
                         setState(() {

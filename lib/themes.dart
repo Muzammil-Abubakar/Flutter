@@ -34,7 +34,9 @@ ThemeData primaryTheme = ThemeData(
     ),
 
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: AppColor.secondaryColor,
+    backgroundColor: Colors.black,
+    selectedItemColor: Colors.red,      // selected icon color
+    unselectedItemColor: Colors.white,  // unselected icon color
   ),
 
   textTheme: TextTheme(
